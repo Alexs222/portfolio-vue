@@ -1,0 +1,22 @@
+include ./common/_mixins
+block variables
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    meta(content="ie=edge" http-equiv="x-ua-compatible")
+    meta(content="width=device-width, initial-scale=1" name="viewport")
+    
+    title #{title}
+
+    link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.9/css/all.css')
+    link(rel='stylesheet' href='./styles/main.min.css')
+
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCPU6pqrmnRz-clxSj_KIs0SwOcXWSjfQQ&callback=initMap' async defer)
+
+  body
+    .wrapper
+      block content
+    script(src='/scripts/main.bundle.js')
+    
