@@ -5,7 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp",
-    "server": "nodemon server",
+    "server": "nodemon server.js",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "gulp build && cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
@@ -51,9 +51,10 @@
     "not ie <= 8"
   ],
   "dependencies": {
-    "body-parser": "^1.18.2",
+    "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "jquery": "^3.3.1",
+    "morgan": "^1.9.1",
     "normalize.css": "^7.0.0",
     "pug": "^2.0.3",
     "vue": "2.5.13",

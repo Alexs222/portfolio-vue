@@ -1,16 +1,14 @@
+include _pages
+
 .footer__wrap
     .footer__section
         .footer__top
             .footer-top__col
-                    ul.menu.footer-menu
+                ul.menu.footer-menu
+                    each page, index in pages
                         li.footer-menu__item
-                            a.footer-menu__link(href="/my-works.html") Мои работы
-                        li.footer-menu__item
-                            a.footer-menu__link(href="/about.html") Обо мне
-                        li.footer-menu__item
-                            a.footer-menu__link(href="/blog.html") Блог
-                        li.footer-menu__item
-                            a.footer-menu__link(href="/index.html") Авторизация
+                            a.footer-menu__link(href=`${page[1]}`) #{page[0]}
+
             .footer-top__col
                 include ../common/_socials_footer
     .footer__section

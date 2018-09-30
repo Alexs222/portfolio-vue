@@ -4,13 +4,6 @@ const aktivization = () => {
         panelInfo = document.querySelector('.front'),
         panelOrder = document.querySelector('.back'),
         buttonIndex = document.querySelector('.order__form-button_main')
-        // section = document.querySelector('.index-section')
-
-        // console.log(buttonAutorization)
-        // console.log(panelInfo)
-        // console.log(panelOrder)
-        // console.log(buttonIndex)
-        // console.log(section)
 
     if (buttonAutorization !== null) {
 
@@ -19,14 +12,15 @@ const aktivization = () => {
             buttonAutorization.style.display = 'none';
             flip.classList.add('active')
 
-        })
+        });
 
-        buttonIndex.addEventListener('click', () => {
+        buttonIndex.addEventListener('click', (e) => {
+            e.preventDefault();
             buttonAutorization.style.display = 'block';
             flip.classList.remove('active')
-        })
-    }
+        });
+    };
     console.log("модуль загружен")
-}
+};
 
 export default aktivization

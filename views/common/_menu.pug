@@ -1,0 +1,7 @@
+include _pages
+
+ul.menu-list
+    each page, index in pages
+        li.menu__item
+            a.menu__link(href=`${page[1]}`) #{page[0]}
+

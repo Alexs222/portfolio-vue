@@ -1,3 +1,5 @@
 <template lang="pug">
-  h2 This is title component!
+  .wrap
+    h2 Это наша будущая админка
+    a(href="/") Back
 </template>
